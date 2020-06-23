@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Centaor</title>
+</head>
+<body>
+    <header>
+        <!-- LEFT CONTAINER -->
+
+        <div id="data">
+            <!-- TITLE -->
+
+            <h2>CENTAOR</h2>
+
+            <!-- SELECT LOGIN / REGISTER -->
+            
+            <div id="box-login-register">
+                <p id="login">Login</p>
+                <span>-</span>
+                <p id="register">Register</p>
+            </div>
+
+            <!-- LOGIN FORM -->
+
+            <div id="form-login" class="move-form">
+                <label for="email-login"><b>Email:</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                
+                <label for="email">
+                <b>Password:</b></label>
+                <input type="password" placeholder="Enter Email" name="password" id="password" required>
+                <button id="submit-login" type="submit">Login</button>
+            </div>
+
+            <!-- NEWSLETTER FORM -->
+
+            <div id="form-newsletter" class="move-form">
+                <input type="text" placeholder="Enter Email" name="news" id="news" required>   
+                <button type="submit">Subscribe</button>
+            </div>
+
+            <!-- REGISTER FORM -->
+
+            <div id="form-register" class="move-form">
+                <label for="name"><b>Name:</b></label>
+                <input type="text" placeholder="Enter Name" name="name" id="name" required>
+
+                <label for="email"><b>Email:</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                
+                <label for="password">
+                <b>Password:</b></label>
+                <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+                <label for="password-confirm">
+                    <b>Confirm Password:</b></label>
+                    <input type="password" placeholder="Confirm Password" name="password-confirm" id="password-confirm" required>
+                <button id="submit-login" type="submit">Register</button>
+            </div>
+
+            <!-- ADMIN CRUD FORM -->
+
+            <div id="form-admin" class="move-form">
+                <button type="submit" id="movie-add">Add Movie</button>
+                <button type="submit" id="movie-update">Update Movie</button>
+                <button type="submit" id="movie-delete">Delete Movie</button>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- RIGHT CONTAINER -->
+
+    <main id="list">
+
+        <!-- SEARCH BAR + FILTER -->
+
+        <div id="search-bar" name="search-link">
+
+            <!-- SEARCH INPUT -->
+
+            <span id="search-text">
+                <input type="text" id="search" autocomplete="off" placeholder="Search Movie">
+            </span> 
+            
+            <!-- FILTER -->
+
+            <span id="filter">
+
+                <!-- PRICE FILTER -->
+
+                <span id="price" class="by-anim">
+                    <span id="descendent-order" class="order-icon"></span>
+                    <span id="by-price" class="by">Price</span>
+                    <span id="ascendent-order" class="order-icon"></span>
+                </span>
+
+                <!-- RATING FILTER -->
+
+                <span id="rating" class="by-anim">
+                    <span id="descendent-order" class="order-icon"></span>
+                    <span id="by-rating" class="by">Rating</span>
+                    <span id="ascendent-order" class="order-icon"></span>
+                </span>
+
+                <!-- GENRE FILTER -->
+
+                <span id="genre" class="by-anim">
+                    <span id="descendent-order" class="order-icon"></span>
+                    <span id="by-genre" class="by">Genre</span>
+                    <span id="ascendent-order" class="order-icon"></span>
+                </span>
+            </span>
+        </div>
+        
+        <!-- MOVIE LIST -->
+
+        <div id="movie-container">
+            <div id="movie">
+            
+                <img src="img/1917.jpg" alt="" id="movie-image">
+                <p id="movie-title">$3.00</p>
+
+                <div id="movie-info"> 
+                    <p id="rating">Rating</p>
+                    <!-- <p id="price">Price</p> -->
+                    <p id="genre">Genre</p>
+                </div>
+            </div>
+
+            <div id="movie-description">
+                <p id="description">1917</p>
+                <p id="description-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil, harum veritatis illum perferendis vel.
+                </p>
+            </div>
+        </div>
+
+        <div id="movie-container">
+            <div id="movie">
+            
+                <img src="img/1917.jpg" alt="" id="movie-image">
+                <p id="movie-title">$3.00</p>
+
+                <div id="movie-info"> 
+                    <p id="rating">Rating</p>
+                    <!-- <p id="price">Price</p> -->
+                    <p id="genre">Genre</p>
+                </div>
+            </div>
+
+            <div id="movie-description">
+                <p id="description">1917</p>
+                <p id="description-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil, harum veritatis illum perferendis vel.
+                </p>
+            </div>
+        </div>
+
+        <div id="movie-container">
+            <div id="movie">
+            
+                <img src="img/1917.jpg" alt="" id="movie-image">
+                <p id="movie-title">$3.00</p>
+
+                <div id="movie-info"> 
+                    <p id="rating">Rating</p>
+                    <!-- <p id="price">Price</p> -->
+                    <p id="genre">Genre</p>
+                </div>
+            </div>
+
+            <div id="movie-description">
+                <p id="description">1917</p>
+                <p id="description-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil, harum veritatis illum perferendis vel.
+                </p>
+            </div>
+        </div>
+
+        <div id="movie-container">
+            <div id="movie">
+            
+                <img src="img/Joker.jpg" alt="" id="movie-image">
+                <p id="movie-title">Joker</p>
+
+                <div id="movie-info"> 
+                    <p id="rating">Rating</p>
+                    <p id="price">Price</p>
+                    <p id="genre">Genre</p>
+                </div>
+            </div>
+
+            <div id="movie-description">
+                <p id="description">Description</p>
+                <p id="description-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil, harum veritatis illum perferendis vel.
+                </p>
+            </div>
+        </div>
+
+        <div id="movie-container">
+            <div id="movie">
+            
+                <img src="img/bill&ted.jpg" alt="" id="movie-image">
+                <p id="movie-title">Bill & Ted</p>
+
+                <div id="movie-info"> 
+                    <p id="rating">Rating</p>
+                    <p id="price">Price</p>
+                    <p id="genre">Genre</p>
+                </div>
+            </div>
+
+            <div id="movie-description">
+                <p id="description">Description</p>
+                <p id="description-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil, harum veritatis illum perferendis vel.
+                </p>
+            </div>
+        </div>
+
+        <div id="movie-container">
+            <div id="movie">
+            
+                <img src="img/5gang.jpg" alt="" id="movie-image">
+                <p id="movie-title">5Gang</p>
+
+                <div id="movie-info"> 
+                    <p id="rating">Rating</p>
+                    <p id="price">Price</p>
+                    <p id="genre">Genre</p>
+                </div>
+            </div>
+
+            <div id="movie-description">
+                <p id="description">Description</p>
+                <p id="description-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil, harum veritatis illum perferendis vel.
+                </p>
+            </div>
+        </div>
+
+        <div id="movie-container">
+            <div id="movie">
+            
+                <img src="img/lazarescu.jpg" alt="" id="movie-image">
+                <p id="movie-title">Mr. Lazarescu</p>
+
+                <div id="movie-info"> 
+                    <p id="rating">Rating</p>
+                    <p id="price">Price</p>
+                    <p id="genre">Genre</p>
+                </div>
+            </div>
+
+            <div id="movie-description">
+                <p id="description">Description</p>
+                <p id="description-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil, harum veritatis illum perferendis vel.
+                </p>
+            </div>
+        </div>
+
+        <div id="movie-container">
+            <div id="movie">
+            
+                <img src="img/1917.jpg" alt="" id="movie-image">
+                <p id="movie-title">1917</p>
+
+                <div id="movie-info"> 
+                    <p id="rating">Rating</p>
+                    <p id="price">Price</p>
+                    <p id="genre">Genre</p>
+                </div>
+            </div>
+
+            <div id="movie-description">
+                <p id="description">Description</p>
+                <p id="description-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil, harum veritatis illum perferendis vel.
+                </p>
+            </div>
+        </div>
+
+        <div id="movie-container">
+            <div id="movie">
+            
+                <img src="img/Joker.jpg" alt="" id="movie-image">
+                <p id="movie-title">Joker</p>
+
+                <div id="movie-info"> 
+                    <p id="rating">Rating</p>
+                    <p id="price">Price</p>
+                    <p id="genre">Genre</p>
+                </div>
+            </div>
+
+            <div id="movie-description">
+                <p id="description">Description</p>
+                <p id="description-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil, harum veritatis illum perferendis vel.
+                </p>
+            </div>
+        </div>
+
+        <div id="movie-container">
+            <div id="movie">
+            
+                <img src="img/bill&ted.jpg" alt="" id="movie-image">
+                <p id="movie-title">Bill & Ted</p>
+
+                <div id="movie-info"> 
+                    <p id="rating">Rating</p>
+                    <p id="price">Price</p>
+                    <p id="genre">Genre</p>
+                </div>
+            </div>
+
+            <div id="movie-description">
+                <p id="description">Description</p>
+                <p id="description-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil, harum veritatis illum perferendis vel.
+                </p>
+            </div>
+        </div>
+
+        <div id="movie-container">
+            <div id="movie">
+            
+                <img src="img/5gang.jpg" alt="" id="movie-image">
+                <p id="movie-title">5Gang</p>
+
+                <div id="movie-info"> 
+                    <p id="rating">Rating</p>
+                    <p id="price">Price</p>
+                    <p id="genre">Genre</p>
+                </div>
+            </div>
+
+            <div id="movie-description">
+                <p id="description">Description</p>
+                <p id="description-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil, harum veritatis illum perferendis vel.
+                </p>
+            </div>
+        </div>
+
+        <div id="movie-container">
+            <div id="movie">
+            
+                <img src="img/5gang.jpg" alt="" id="movie-image">
+                <p id="movie-title">5Gang</p>
+
+                <div id="movie-info"> 
+                    <p id="rating">Rating</p>
+                    <p id="price">Price</p>
+                    <p id="genre">Genre</p>
+                </div>
+            </div>
+
+            <div id="movie-description">
+                <p id="description">Description</p>
+                <p id="description-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil, harum veritatis illum perferendis vel.
+                </p>
+            </div>
+        </div>
+
+        <!-- SCROLL TOP ICON -->
+
+        <div id="scroll-top" >
+            <div id="to-top" onclick='window.scrollTo({top: 0, behavior: "smooth"});'></div>
+            <div id="shadow"></div>
+        </div>
+
+        <!-- FOOTER -->
+
+        <footer>
+            <ul>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+                <li><a href="support.html" target="_blank">Support</a></li>
+            </ul>
+            <p id="copy">&copy Tasca Eduard Cristian</p>
+        </footer>
+    </main>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="./js/user.js"></script>
+    <script src="./js/register.js"></script>
+    <script src="./js/login.js"></script>
+    
+    
+</body>
+</html>
