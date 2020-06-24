@@ -68,7 +68,49 @@
                 <button type="submit" id="movie-update">Update Movie</button>
                 <button type="submit" id="movie-delete">Delete Movie</button>
             </div>
+
+
+            <!-- MODAL ADD MOVIE -->
+            <div id="myModal" class="modal">
+    
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <p>Complete the input forms to add a movie</p>
+                        <p class="close">&times;</p>
+                    </div>
+                    <div class="modal-form-container">
+                        <div class="modal-form">
+                            <label for="name-movie"><b>Name:</b></label>
+                            <input type="text" placeholder="Enter the name of the movie" name="name-movie" id="name-movie" required>
+
+                            <label for="price-movie"><b>Price:</b></label>
+                            <input type="text" placeholder="Enter the price of the movie" name="name" id="name" required>
+
+                            <label for="rating-movie"><b>Rating:</b></label>
+                            <input type="text" placeholder="Enter the rating of the movie" name="ating-movie" id="ating-movie" required>
+
+                            <label for="genre-movie"><b>Genre:</b></label>
+                            <input type="text" placeholder="Enter the genre of the movie" name="genre-movie" id="genre-movie" required>
+
+                        </div>
+
+                        <div class="modal-form">
+                            <label for="descr-movie"><b>Description:</b></label>
+                            <textarea id="descr-movie" name="descr-movie" rows="7" cols="40" placeholder="Enter the description of the movie"></textarea>
+                            
+                            <label for="img-movie"><b>Image:</b></label>
+                            <input type="text" placeholder="Enter the image of the movie" name="img-movie" id="img-movie" required>   
+                        </div>
+
+                    </div>
+                    <button id="submit-add-movie" type="submit">Add Movie</button>
+                </div>
+    
+            </div>
         </div>
+
+        <!-- Trigger/Open The Modal -->
+
         
     </header>
 
@@ -394,7 +436,38 @@
     <script src="./js/user.js"></script>
     <script src="./js/register.js"></script>
     <script src="./js/login.js"></script>
-    
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("movie-add");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "flex";
+          document.getElementById("list").style.zIndex = "-1";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+          document.getElementById("list").style.zIndex = "0";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+            document.getElementById("list").style.zIndex = "0";
+          }
+        }
+        
+    </script>
     
 </body>
 </html>

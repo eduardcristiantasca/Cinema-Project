@@ -26,7 +26,7 @@ body::before {
     width: 100%;
     height: 10px;
     box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
-    z-index: 100;
+    
 }
 
 header{
@@ -186,7 +186,7 @@ input[type=text]:focus, input[type=password]{
 
 @keyframes move-form {
     0%{
-        transform: translateX(-10vh);
+        transform: translateX(-5vh);
     }
         
 }
@@ -239,6 +239,11 @@ button:focus{
     justify-content: space-evenly;
     margin: 20vh 0;
     margin-left: 10vh;
+    z-index: 0;
+}
+
+#movie-title{
+    cursor: pointer;
 }
 
 #movie-header{
@@ -248,6 +253,7 @@ button:focus{
 
 #movie-container{
     margin-right: 24vh;
+  
 }
 
 #movie{
@@ -437,6 +443,170 @@ ul li a:visited{
 }
 
 
+
+#data .form-login-show, #data .newsletter-show{
+    display: none;
+}
+
+#form-admin{
+    margin: 0 auto;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 128, 0.1);
+    width: 40vh;
+    height: 30vh;
+    background-color:white;
+    padding: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+}
+
+
+
+/* MODAL ADD MOVIE */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    min-width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow-y: scroll; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
+}
+  
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    animation: move-modal-form 1s;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 5vh;
+}
+
+.modal-form-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form input[type="text"]{
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 4vh;
+    width: 78.5%;
+}
+
+.modal-form label{
+    margin-bottom: -0.2vh;
+}
+
+@keyframes move-modal-form {
+    0%{
+        transform: translateY(-10vh);
+    }
+        
+}
+
+textarea{
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 2vh;
+    background-color: rgba(235, 235, 235, 0.381);
+    resize: none;
+    margin-top: 2vh;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+#submit-add-movie{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1000px){
+
+    #search-bar{
+        height: 20vh;
+    }
+
+    #search-bar input{
+        margin-left: -1vh;
+        padding: 0;
+        
+    }
+
+    #filter{
+        margin: 0 auto;
+    }
+
+
+    #movie-container{
+        margin-left: -10vh;
+        padding: 0 2vh;
+    }
+
+    #movie-info p{
+        margin: 0;
+    }
+
+    #movie-container{
+        margin-left: -10vh;
+        padding: 0 3vh;
+    }
+
+    #price, #genre, #rating{
+        margin-bottom: 2vh;
+        margin: 2vh auto;
+    }
+
+    .modal-form-container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .modal-content{
+        margin-top: 2vh;
+        width: 80%;
+        height: 118vh;
+    }
+}
+
 @media screen and (max-width: 1480px){
     body{
         flex-wrap: wrap;
@@ -451,14 +621,22 @@ ul li a:visited{
         position: static;
     }
 
+
+
     #search-bar{
         position: static;
-        margin-bottom: 12vh;
+        margin: 0 auto;
+        margin-top: -10vh;
+        margin-bottom: 10vh;
         margin-right: 10vh;
         width: 90%;
-        height: 12vh;
-        
+        height: 20vh;
+    }
+
+    #search-bar input{
+        margin-left: 2vh;
         padding: 0;
+        
     }
 
     #filter{
@@ -491,41 +669,16 @@ ul li a:visited{
        width: 90%;
        margin-right: 10vh;
     }
-}
 
-@media screen and (max-width: 1000px){
-
-    #search-bar{
-        height: 20vh;
+    .modal-content{
+        width: 80%;
     }
 
-    #filter{
-        margin: 0 auto;
-    }
 
-    #price, #genre, #rating{
-        margin-bottom: 2vh;
-        margin: 2vh auto;
-    }
 }
 
 
 
 
-#data .form-login-show, #data .newsletter-show{
-    display: none;
-}
 
-#form-admin{
-    margin: 0 auto;
-    box-shadow: 0 0 10px 4px rgba(0, 0, 128, 0.1);
-    width: 40vh;
-    height: 30vh;
-    background-color:white;
-    padding: 5vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    display: none;
-}
 
