@@ -201,6 +201,7 @@ button{
     height: 5vh;
     background-color: rgba(0, 0, 128, 0.1);
     color: rgba(0, 0, 0, 0.857);
+    cursor: pointer;
 }
 
 button:hover{
@@ -242,10 +243,6 @@ button:focus{
     z-index: 0;
 }
 
-#movie-title{
-    cursor: pointer;
-}
-
 #movie-header{
     width: 21vh;
     height: 30vh; 
@@ -253,7 +250,9 @@ button:focus{
 
 #movie-container{
     margin-right: 24vh;
-  
+    cursor: pointer;
+    margin-bottom: 12vh;
+    height: 36vh;
 }
 
 #movie{
@@ -348,6 +347,7 @@ button:focus{
     text-align: center;
     overflow: hidden;
     cursor: pointer;
+    margin-top: 5vh;
 }
 
 @keyframes move {
@@ -476,8 +476,13 @@ ul li a:visited{
     overflow-y: scroll; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
+    
 }
   
+.modal::-webkit-scrollbar {
+    display: none;
+}
+
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
@@ -531,6 +536,13 @@ ul li a:visited{
 .modal-form label{
     margin-bottom: -0.2vh;
 }
+
+#img-movie{
+    margin-top: 1vh;
+    width: 80%;
+}
+
+ 
 
 @keyframes move-modal-form {
     0%{
@@ -674,6 +686,9 @@ textarea:focus{
         width: 80%;
     }
 
+    #submit-add-movie{
+        margin-top: 5vh;
+    }
 
 }
 
