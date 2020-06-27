@@ -31,6 +31,8 @@ document.getElementById("submit-login").onclick = function () {
     var form_newsletter = document.getElementById("form-newsletter");
     var form_admin = document.getElementById("form-admin");
     
+    document.getElementById("invalid-login").style.display = "none";
+    document.getElementById("submit-login").style.backgroundColor = "rgba(0, 0, 128, 0.1)";
     // SHOW THE ADMIN CRUD FORM / HIDE OTHER
 
     if(email == "admin" && password == "admin"){
@@ -45,12 +47,14 @@ document.getElementById("submit-login").onclick = function () {
     for(let i = 0; i < userList.length; i++){
         if(email== userList[i].email && password == userList[i].password){
             checkForUser = true;
-            location.href = "support.html";
+            document.getElementById("submit-login").style.backgroundColor = "lightgreen";
+            
         }
     }
     
     if(!checkForUser)
-        alert("Wrong email or password!");
+        document.getElementById("invalid-login").style.display = "inline";
+
 };
 
 

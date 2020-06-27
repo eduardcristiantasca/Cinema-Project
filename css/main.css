@@ -78,6 +78,8 @@ h2{
 .by-anim{
     cursor: pointer;
     margin-left: 2vh;
+    margin-bottom: 2vh;
+    margin: 2vh auto;
 }
 
 
@@ -162,6 +164,12 @@ input[type=text]:focus, input[type=password]{
     margin-bottom: 2vh;
 }
 
+#invalid-login{
+    display: none;
+    margin-top: -4vh;
+    color: rgba(255, 0, 0, 0.707);
+}
+
 #form-register{
     margin: 0 auto;
     box-shadow: 0 0 10px 4px rgba(0, 0, 128, 0.1);
@@ -175,10 +183,16 @@ input[type=text]:focus, input[type=password]{
 }
 
 #form-register input[type=text],#form-register input[type=email], #form-register input[type=password]{
-    margin-top: -5vh;
+    margin-top: -4vh;
     margin-left: -1vh;
 
 }
+
+#invalid-name, #invalid-email, #invalid-password, #invalid-password-confirm, #email-exist{
+    display: none;
+    color: rgba(255, 0, 0, 0.707);
+}
+
 
 .move-form{
     animation: move-form 1s;
@@ -269,7 +283,7 @@ button:focus{
     height: 30vh;
 }
 
-#description{
+#movie-title{
     border-bottom: 1.5px solid rgba(0, 0, 128, 0.2);
     margin: 5px;
     color: rgba(0, 0, 0, 0.8);
@@ -280,7 +294,9 @@ button:focus{
     text-align: left;
     width: 100%;
     height: 100%;
+    
 }
+
 #movie-image{
     width: 100%;
     height: 100%;
@@ -304,12 +320,14 @@ button:focus{
     }
 }
 
-#movie-title{
+#price{
     border-bottom: 1.5px solid rgba(0, 0, 128, 0.2);
     margin: 5px 5vh;
     color: rgba(0, 0, 0, 0.8);
     text-align: center;
 }
+
+
 
 #movie:hover > #movie-title{
     transition: 1s;
@@ -329,7 +347,7 @@ button:focus{
     background-color: rgba(255, 255, 255, 0.6);
     color: rgba(0, 0, 0, 0.8);
     text-align: center;
-    width: 33%;
+    width: 55%;
     justify-self: center;
     margin: 0 auto;
     box-shadow: 0 0 10px 4px rgba(221, 211, 211, 0.17);
@@ -537,7 +555,7 @@ ul li a:visited{
     margin-bottom: -0.2vh;
 }
 
-#img-movie{
+#movie-img{
     margin-top: 1vh;
     width: 80%;
 }
@@ -606,6 +624,7 @@ textarea:focus{
         margin: 2vh auto;
     }
 
+
     .modal-form-container{
         display: flex;
         justify-content: space-between;
@@ -641,18 +660,17 @@ textarea:focus{
         margin-top: -10vh;
         margin-bottom: 10vh;
         margin-right: 10vh;
-        width: 90%;
-        height: 20vh;
+        width: 90vw;
+        height: 12vh;
     }
 
     #search-bar input{
-        margin-left: 2vh;
+        margin-left: -1vh;
         padding: 0;
-        
     }
 
     #filter{
-        margin-right: 3vh;
+        margin-right: 8vw;
     }
 
     #box-login-register{
