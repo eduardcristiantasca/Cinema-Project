@@ -49,12 +49,10 @@ h2{
 #search-bar{
     margin-top: -3vh;
     width: 60%;
-    height: 5.34vh;
-    text-align: left;
+    height: 6vh;
+    /* text-align: left; */
     padding: 1vh;
-    padding-left: 2vh;
     position: relative;
-    bottom: 12vh;
     top: 5vh;
     z-index: 1;
     position: fixed;
@@ -62,7 +60,6 @@ h2{
     flex-wrap: wrap;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     box-shadow:0 7px 10px 5px rgba(201, 66, 66, 0.313);
 }
 
@@ -252,9 +249,17 @@ button:focus{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 20vh 0;
-    margin-left: 10vh;
     z-index: 0;
+}
+
+#movie-list{
+    display: flex;
+    /* flex-direction: column; */
+    margin-top: 20vh;
+    flex-wrap: wrap;
+    padding-left: 10vw;
+    /* background-color: khaki; */
+    width: 65vw;
 }
 
 #movie-header{
@@ -263,7 +268,7 @@ button:focus{
 }
 
 #movie-container{
-    margin-right: 24vh;
+    margin-right: 15vw;
     cursor: pointer;
     margin-bottom: 12vh;
     height: 36vh;
@@ -592,6 +597,7 @@ textarea:focus{
 
     #search-bar{
         height: 20vh;
+        
     }
 
     #search-bar input{
@@ -656,10 +662,7 @@ textarea:focus{
 
     #search-bar{
         position: static;
-        margin: 0 auto;
-        margin-top: -10vh;
-        margin-bottom: 10vh;
-        margin-right: 10vh;
+        margin: 8vh auto -5vh;
         width: 90vw;
         height: 12vh;
     }
@@ -691,14 +694,19 @@ textarea:focus{
         border-bottom: 1px solid rgba(0, 0, 128, 0.1);
     }
 
-    #scroll-top{
+    /* #scroll-top{
         margin-left: -10vh;
-    }
+    } */
 
     footer{
-       width: 90%;
-       margin-right: 10vh;
+       width: 100%;
+       margin-top: -10vh;
+       margin-bottom: 5vh;
     }
+
+    footer:before, footer:after{
+        display: none;
+     }
 
     .modal-content{
         width: 80%;
@@ -708,6 +716,9 @@ textarea:focus{
         margin-top: 5vh;
     }
 
+    #movie-list{
+        margin-right: 14vw;
+    }
 }
 
 

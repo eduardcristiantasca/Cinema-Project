@@ -47,8 +47,9 @@ function movieComponent(movie){
 // ADD THE CREATED MOVIE/COMPONENT TO THE LIST OF MOVIES
 
 function addMovie(movieComponent){
-    var list = document.getElementById("scroll-top");
-    list.insertAdjacentHTML('beforebegin', movieComponent);
+    // var list = document.getElementById("scroll-top");
+    var list = document.getElementById("movie-list");
+    list.insertAdjacentHTML('afterbegin', movieComponent);
 }
 
 // POPULATE MOVIE LIST
