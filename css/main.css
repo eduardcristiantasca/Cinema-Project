@@ -60,7 +60,13 @@ h2{
     flex-wrap: wrap;
     display: flex;
     justify-content: space-evenly;
-    box-shadow:0 7px 10px 5px rgba(201, 66, 66, 0.313);
+    box-shadow: 0 0 10px 4px rgba(0, 0, 128, 0.1);
+    transition: 1s;
+}
+
+#search-bar:hover{
+    transition: 1s;
+    box-shadow:0 0 10px 3px rgba(201, 66, 66, 0.313);
 }
 
 #filter{
@@ -82,6 +88,7 @@ h2{
 
 .by-anim:hover > .by{
     border-bottom: 1px solid rgba(0, 0, 0, 0.115);
+    
 }
 
 #descendent-order{
@@ -156,6 +163,7 @@ input[type=text]:focus, input[type=password]{
     flex-direction: column;
     justify-content: space-around;
 }
+
 
 #form-login label{
     margin-bottom: 2vh;
@@ -272,19 +280,20 @@ button:focus{
     cursor: pointer;
     margin-bottom: 12vh;
     height: 36vh;
+    transition: 1s;
 }
 
 #movie{
     max-width: 21vh;
     max-height: 30vh;
-    box-shadow: 0 5px 10px 5px rgb(171, 171, 186);
+    box-shadow: 0 5px 10px 2px rgb(218, 213, 213);
 }
 
 #movie-description{
     position: relative;
     top: -30vh;
     left: 22.5vh;
-    width: 30vh;
+    width: 35vh;
     height: 30vh;
 }
 
@@ -299,12 +308,12 @@ button:focus{
     text-align: left;
     width: 100%;
     height: 100%;
-    
+    padding-left: 5px;
 }
 
 #movie-image{
     width: 100%;
-    height: 100%;
+    height: 30vh;
     /* IE6-9 */
     filter: gray; 
     /* Google Chrome, Safari 6+ & Opera 15+ */
@@ -316,6 +325,18 @@ button:focus{
 #movie-container:hover > #movie > #movie-image{
     animation: colorful 1s forwards;
 }
+
+#movie-container:hover > #movie > #movie-info{
+    transition: 0.3s;
+    margin-top: -10px;
+    border-top: 1.5px solid rgba(255, 0, 0, 0.306);
+    
+}
+
+/* #movie-container:hover > #movie-description > #movie-title, #movie-container:hover > #movie > #price{
+    transition: 1s;
+    border-bottom: 1.5px solid rgba(0, 0, 128, 0.401);
+} */
 
 
 @keyframes colorful{
@@ -334,20 +355,21 @@ button:focus{
 
 
 
-#movie:hover > #movie-title{
+/* #movie:hover > #movie-title{
     transition: 1s;
     color: rgba(0, 0, 0, 1);
-}
+} */
 
-#movie:hover > #movie-info{
+/* #movie:hover > #movie-info{
     color: rgb(0, 0, 0);
     transition: 1s;
     background-color: rgba(255, 255, 255, 0.9);
-}
+  
+} */
 
 #movie-info{
     position: relative;
-    bottom: 42.5vh;
+    bottom: 43vh;
     padding: 5%;
     background-color: rgba(255, 255, 255, 0.6);
     color: rgba(0, 0, 0, 0.8);
@@ -356,6 +378,9 @@ button:focus{
     justify-self: center;
     margin: 0 auto;
     box-shadow: 0 0 10px 4px rgba(221, 211, 211, 0.17);
+    z-index: -1;
+    border-top: 1.5px solid rgba(0, 0, 128, 0.2);
+    transition: 0.3s;
 }
 
 
@@ -424,8 +449,8 @@ footer::before{
     right: 5vh;
     display: block;
     padding: 0 5vh;
-    box-shadow: 0 0 10px 4px rgba(221, 211, 211, 0.17);
-    box-shadow:0 7px 15px 5px rgba(201, 66, 66, 0.313);
+    
+    box-shadow:0 0 10px 7px rgba(201, 66, 66, 0.313);
 }
 
 
@@ -439,8 +464,7 @@ footer::after{
     right: 5vh;
     display: block;
     padding: 0 5vh;
-    box-shadow: 0 0 10px 4px rgba(221, 211, 211, 0.17);
-    box-shadow:0 7px 15px 5px rgba(201, 66, 66, 0.313);
+    box-shadow:0 0 10px 3px rgba(201, 66, 66, 0.313);
 }
 
 ul{
@@ -664,12 +688,14 @@ textarea:focus{
         position: static;
         margin: 8vh auto -5vh;
         width: 90vw;
-        height: 12vh;
+        height: 7vh;
+        padding-top: 1vh;
     }
 
     #search-bar input{
         margin-left: -1vh;
-        padding: 0;
+        padding-top: 1.7vh;
+        
     }
 
     #filter{
@@ -718,10 +744,23 @@ textarea:focus{
 
     #movie-list{
         margin-right: 14vw;
+        
     }
 }
 
+@media screen and (max-width: 650px){
+    #search-bar{
+        height: 12vh;
+    }
 
+    #filter{
+        margin-right: 12vw;
+    }
+
+    #movie-description{
+        width: 50vw;
+    }
+}
 
 
 

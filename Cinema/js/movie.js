@@ -87,3 +87,4 @@ document.getElementById("submit-add-movie").onclick = function (){
     console.log(newMovie);
 }
 
+
